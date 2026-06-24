@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyadarshini Prasad | Sr. MuleSoft & Integration Architect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS for Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <style>
+        /* Custom Keyframe Animations */
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.05); opacity: 0.6; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-pulse-slow { animation: pulse-slow 8s infinite ease-in-out; }
+        .animate-float { animation: float 4s infinite ease-in-out; }
+        
+        /* Glassmorphism utility */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-200 font-sans overflow-x-hidden antialiased">
+
+    <!-- Background Tech Glow Elements -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse-slow"></div>
+    <div class="absolute top-[120vh] right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-20 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" style="animation-delay: 4s;"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0b0f19]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                priyadarshiniprasad.com
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#about" class="text-slate-400 hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="text-slate-400 hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-400 hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#education" class="text-slate-400 hover:text-blue-400 transition-colors">Education</a>
+                <a href="#contact" class="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/20">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-[#0b0f19]/95 backdrop-blur-lg border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-blue-400 py-2">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-blue-400 py-2">Skills</a>
+            <a href="#experience" class="block text-slate-300 hover:text-blue-400 py-2">Experience</a>
+            <a href="#education" class="block text-slate-300 hover:text-blue-400 py-2">Education</a>
+            <a href="#contact" class="block text-center px-4 py-2 rounded-full bg-blue-600 text-white">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-24 flex items-center relative px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center w-full">
+            
+            <!-- Left Narrative -->
+            <div class="md:col-span-7 order-2 md:order-1 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-wider uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Available for Architecture & Development
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Priyadarshini Prasad</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-semibold text-slate-300">
+                    Integration Specialist AWS and Mulesoft
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Integration Architect with a proven track record of bridging the gap between legacy core infrastructure and modern cloud ecosystems, specializing in connecting Mulesoft with AWS cloud environments to build scalable, secure and event driven architectures. Architecting seamless data flows, robust API ecosystems, and scalable cloud structures using both Mule and AWS topologies.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#experience" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium hover:opacity-90 transition-all shadow-lg shadow-indigo-600/30 flex items-center gap-2">
+                        View Portfolio <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#skills" class="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-medium transition-all flex items-center gap-2">
+                        Core Competencies
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Canvas -->
+            <div class="md:col-span-5 order-1 md:order-2 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] group">
+                    <!-- Tech frame decorations -->
+                    <div class="absolute -inset-2 bg-gradient-to-b from-blue-500 to-purple-600 rounded-2xl opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
+                    <div class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none z-20 m-2"></div>
+                    
+                    <!-- Verbatim Reference Image Box -->
+                    <div class="w-full h-full rounded-2xl overflow-hidden relative border border-white/10 glass-card bg-slate-900 z-10">
+                        <img src="13856.jpg" alt="Priyadarshini Prasad Portrait" class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-transparent to-transparent opacity-60"></div>
+                    </div>
+
+                    <!-- Floating tech element badge -->
+                    <div class="absolute -bottom-5 -right-5 glass-card p-4 rounded-xl shadow-xl border border-white/10 flex items-center gap-3 animate-float z-30">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-lg font-bold">
+                            M4
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Certified</p>
+                            <p class="text-xs font-semibold text-white">Mulesoft Certified Integration Architect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Professional Summary/About Metrics Section -->
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-8 text-center md:text-left" data-aos="fade-up">
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-extrabold text-blue-400 mb-2">10+ Years</div>
+                <div class="text-sm font-semibold text-white uppercase tracking-wider mb-2">IT Experience</div>
+                <p class="text-xs text-slate-400 leading-relaxed">A robust foundation across the entire Software Development Life Cycle (SDLC), managing architecture, code, and deployments.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-extrabold text-indigo-400 mb-2">3+ Years</div>
+                <div class="text-sm font-semibold text-white uppercase tracking-wider mb-2">MuleSoft ESB Specialist</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Deep-dive focus building intricate message routing frameworks, custom error pipelines, and standard architectures.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-extrabold text-purple-400 mb-2">API-Led</div>
+                <div class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Architecture Core</div>
+                <p class="text-xs text-slate-400 leading-relaxed">Expert execution of system, process, and experience API abstraction layers utilizing RAML and CloudHub ecosystems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Ecosystem Grid Section -->
+    <section id="skills" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Technical Competencies</h2>
+            <p class="text-slate-400">An expansive technical stack balancing cutting-edge cloud integration tools with proven enterprise database ecosystems.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Skill Box 1 -->
+            <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 text-xl">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                </div>
+                <h3 class="text-base font-semibold text-white mb-3">MuleSoft Integration</h3>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Mule Server 3.x & 4.x</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Anypoint Studio & Manager</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>DataWeave Transformations</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>CloudHub Deployment</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>MUnit Testing Automation</li>
+                </ul>
+            </div>
+
+            <!-- Skill Box 2 -->
+            <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4 text-xl">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="text-base font-semibold text-white mb-3">Amazon Web Services</h3>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i>Amazon S3</li>
+                    <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i>Amazon SQS/SNS</li>
+                    <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i>AWS Lambda</li>
+                    <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i>Cloud Integration Architecture</li>
+                    <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i>Mulesoft AWS Connectors</li>
+                </ul>
+            </div>
+
+            <!-- Skill Box 3 -->
+            <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 text-xl">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3 class="text-base font-semibold text-white mb-3">Languages & Frameworks</h3>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Java & EJB</li>
+                    <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>RAML Specification</li>
+                    <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>REST & SOAP Web Services</li>
+                    <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>HTML, XML & JSON</li>
+                    <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>JavaScript & JSP</li>
+                </ul>
+            </div>
+
+            <!-- Skill Box 4 -->
+            <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="400">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4 text-xl">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3 class="text-base font-semibold text-white mb-3">DevOps & Utilities</h3>
+                <ul class="text-xs text-slate-400 space-y-2">
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>CI/CD Jenkins & Maven</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>GitHub & TFS</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Salesforce Connector</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>OAuth Security Profiles</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Remedy / HP OpenView</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Interactive Timeline Section -->
+    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto border-t border-white/5">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Professional History</h2>
+            <p class="text-slate-400">A timeline charting over a decade of verified project deliveries and architectural milestones globally.</p>
+        </div>
+
+        <div class="relative border-l border-white/10 pl-6 ml-4 space-y-12">
+		
+			<!-- Job Block 0 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">Sr. Integration Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400">Nov 2020 - Present</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Tata Consultancy Services &bull; Sydney, Australia</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Architected and deployed production-ready integration pipelines connecting local applications to AWS cloud infrastructure, leveraging secure VPC peering, dedicated AWS configurations.</li>
+                    <li>Extensively utilized Mulesoft's native AWS connectors to build high throughput asynchronous frameworks.</li>
+                    <li>Configured end to end security profiles for AWS facing API's, utilizing AWS IAM policies, access keys and role-based permissions alongside Mulesoft's API Manager to ensure data compliance.</li>
+                </ul>
+            </div>
+            
+            <!-- Job Block 1 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">Sr. MuleSoft Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400">Feb 2019 - July 2020</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Eleventh Dimension Solutions &bull; Sydney, Australia</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Structured conceptual data blueprints, Business Requirement Documents (BRD), and core foundational application vision statements.</li>
+                    <li>Engineered RESTful structures inside Anypoint Studio using custom multi-scope flows, sub-flows, structural conditional exception patterns, and DataWeave scripts.</li>
+                    <li>Built API connections targeting Salesforce structures using specialized Salesforce upsert operations and tracking infrastructure hooks.</li>
+                </ul>
+            </div>
+
+            <!-- Job Block 2 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">Sr. MuleSoft Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">April 2018 - Jan 2019</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Eli Lilly &bull; Indianapolis, U.S.</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Deployed comprehensive Enterprise Application Integration (EAI) fabrics leveraging localized Mule 4.x runtime specifications.</li>
+                    <li>Designed rigid layered abstraction profiles map layout connections (System, Process, Experience APIs).</li>
+                    <li>Authored flexible DataWeave templates converting legacy structural XML datasets into high-fidelity clean JSON deliverables.</li>
+                </ul>
+            </div>
+
+            <!-- Job Block 3 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">MuleSoft Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400">May 2017 - April 2018</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Rev Group, Inc &bull; Wisconsin, U.S.</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Penned formal technical documentation parameters scoping enterprise structural data maps.</li>
+                    <li>Utilized Maven script systems standardizing continuous integration application deliveries into Anypoint CloudHub environments.</li>
+                </ul>
+            </div>
+
+            <!-- Job Block 4 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">Informatica Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-400">July 2015 - March 2017</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Keane India Pvt Ltd &bull; India</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Led data profile tracking assessments normalizing complex source structural information pipelines into staging tables.</li>
+                    <li>Programmed advanced multi-transformation structures (Lookups, Aggregators, Filters) tuning large execution runs.</li>
+                </ul>
+            </div>
+
+            <!-- Job Block 5 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">Informatica Developer</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-400">Nov 2010 - Mar 2014</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Techmore Infomedia Inc. &bull; India</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Built operational frontend interface panels leveraging JavaScript, CSS, HTML layouts, and core JSP execution frameworks.</li>
+                    <li>Handled database access layers writing structured raw JDBC hooks talking directly into Oracle structures.</li>
+                </ul>
+            </div>
+
+            <!-- Job Block 6 -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0b0f19]"></div>
+                <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white">IT Project Manager</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-400">Jul 2007 - Jul 2010</span>
+                </div>
+                <h4 class="text-sm font-medium text-slate-300 mb-3">Wipro Technologies &bull; India</h4>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li>Constructed operational plans containing granular scoping lists, programmatic calendar checkpoints, and fiscal monitoring strategies.</li>
+                    <li>Supervised delivery groups keeping track of status checks and delivering progress assessments directly to global key stakeholders.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Academic Background</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4" data-aos="fade-right">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl shrink-0">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-blue-400 font-semibold tracking-wider block mb-1">2005 - 2007</span>
+                    <h3 class="text-base font-bold text-white mb-1">Masters in Computer Technology</h3>
+                    <p class="text-xs text-slate-400">Advanced study focusing on systems deployment methodologies, data architecture design patterns, and engineering principles.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4" data-aos="fade-left">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl shrink-0">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-purple-400 font-semibold tracking-wider block mb-1">2002 - 2005</span>
+                    <h3 class="text-base font-bold text-white mb-1">Bachelors in Computer Science</h3>
+                    <p class="text-xs text-slate-400">Fundamental coursework specializing in core programming models, algorithmic logic, discrete computing, and relational structures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer Form Section -->
+    <section id="contact" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 relative">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Let's build reliable connections.</h2>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Interested in adding high-throughput API design layers, robust enterprise service routing maps, or standard cloud data migrations to your digital enterprise pipelines? Let's talk.
+                </p>
+                <div class="space-y-4 text-xs font-medium text-slate-300">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400"><i class="fa-solid fa-envelope"></i></span>
+                        <span>contact@priyadarshiniprasad.com</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>Sydney, Australia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <form class="glass-card p-8 rounded-2xl space-y-4" onsubmit="event.preventDefault(); alert('Thank you for connecting! This mock pipeline functions flawlessly.');">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Name</label>
+                            <input type="text" required class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email</label>
+                            <input type="email" required class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message Topic</label>
+                        <input type="text" placeholder="e.g. Mule 4 Architecture Integration Consultation" class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message</label>
+                        <textarea rows="4" required class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold text-xs tracking-wider uppercase text-white hover:opacity-90 transition-all shadow-md">
+                        Transmit Message Pipeline
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footnote block -->
+        <div class="mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 priyadarshiniprasad.com &bull; All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-github text-base"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin text-base"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script triggers for Animations and Responsive behaviors -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Init Scroll Animation Frame
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Toggle mobile dynamic drawer menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close layout if nav links get clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add header shadow transform property on active screen scrolling
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-[#0b0f19]/95', 'shadow-xl', 'border-white/10');
+                header.classList.remove('bg-[#0b0f19]/80', 'border-white/5');
+            } else {
+                header.classList.remove('bg-[#0b0f19]/95', 'shadow-xl', 'border-white/10');
+                header.classList.add('bg-[#0b0f19]/80', 'border-white/5');
+            }
+        });
+    </script>
+</body>
+</html>
